@@ -1,5 +1,5 @@
 {
-  "name": "leetcode",
+  "name": "signature-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,9 +9,7 @@
     "build": "npx rimraf ./dist && tsc",
     "lint": "eslint src/**/*.ts",
     "format": "eslint src/**/*.ts --fix",
-    "test:": "node -r ts-node/register --test-only --test ./test/index.ts",
-    "tw": "node -r ts-node/register --watch --test ./test/index.ts",
-    "two": "node -r ts-node/register --watch --test-only --test ./test/index.ts"
+    "test:": "node -r ts-node/register --test-only --test ./test/index.ts"
   },
   "prettier": {
     "printWidth": 120,
