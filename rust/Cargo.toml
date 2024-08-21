@@ -1,0 +1,17 @@
+[package]
+name = "sign"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+k256 = { version = "0.13.3", features = ["ecdsa", "std", "pkcs8"] }
+hex = { package = "const-hex", version = "1.6", features = ["hex"] }
+hex-literal = "0.4"
+primitive-types = "0.12.2"
+tiny-keccak = { version = "2.0.2", features = ["keccak"] }
+rsa = { version = "0.9.6", features = ["std", "sha2"] }
+ring = "0.17.8"
+anyhow = "1.0.86"
+# tiny-keccak = { version = "2.0.2", default-features = false }

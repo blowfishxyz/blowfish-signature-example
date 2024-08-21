@@ -1,0 +1,7 @@
+# Rust related
+**/target
+
+# TS related
+**/build
+**/dist
+**/node_modules
