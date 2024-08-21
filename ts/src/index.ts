@@ -1,9 +1,11 @@
 import * as fs from 'fs'
 import * as crypto from 'crypto'
 
+// Keys in PEM format from the data directory
 const PRIVATE_KEY_PEM_PATH = '../data/key.pem'
 const PUBLIC_KEY_PEM_PATH = '../data/key.pub.pem'
 
+// Data files to be used in the data directory
 const MESSAGE_FILE_PATH = '../data/data.txt'
 const SIGNATURE_FILE_PATH = '../data/data.txt.sign'
 
@@ -16,6 +18,10 @@ function validateDigitalSignature(data: string, receivedSignature: string): bool
   return verify.verify(publicKey, receivedSignature, 'binary')
 }
 
+/**
+ * Loads the public key in its PEM format and verifies the content in data.txt.sign against the
+ * data.txt message file
+ */
 export function main() {
   // Read message from data file
   const message = fs.readFileSync(MESSAGE_FILE_PATH, 'utf-8')
@@ -26,7 +32,9 @@ export function main() {
 
   // Validate the digital signature
   const isSignatureValid = validateDigitalSignature(message, signature)
+
   console.log('Signature Validation Result:', isSignatureValid)
 }
 
 main()
+
