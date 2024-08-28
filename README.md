@@ -68,3 +68,12 @@ _Note:_ This example already comes with `data.txt` and `data.txt.sign` files, bu
     npm start
     ```
 
+## Run the API request example
+
+Runs an example making a request to the Blowfish scan Solana transactions API and verifies the returned signature against the response body with the public key.
+
+For this example to work, you need to provide a valid Blowfish `API_KEY` to the terminal command.
+
+```bash
+API_KEY={your-key-here} cargo run -- request
+```

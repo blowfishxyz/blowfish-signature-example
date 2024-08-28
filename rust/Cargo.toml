@@ -6,6 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-hex = { package = "const-hex", version = "1.6", features = ["hex"] }
-ring = "0.17.8"
 anyhow = "1.0.86"
+hex = { package = "const-hex", version = "1.6", features = ["hex"] }
+reqwest = { version = "0.12.7", features = ["blocking"] }
+ring = "0.17.8"
